@@ -1,7 +1,7 @@
 const getGoods = () => {
   const links = document.querySelectorAll('.navigation-link');
   
-  if (window.location.pathname !== 'goods.html') {
+  if (window.location.pathname === 'index.html') {
     const allBtn = document.querySelector('.more');
     allBtn.addEventListener('click', (event) => {
       event.preventDefault();
