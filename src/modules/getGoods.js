@@ -1,7 +1,7 @@
 const getGoods = () => {
   const links = document.querySelectorAll('.navigation-link');
   
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname !== 'goods.html') {
     const allBtn = document.querySelector('.more');
     allBtn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -42,7 +42,7 @@ const getGoods = () => {
         const array = category ? data.filter((item) => item[category] === value) : data;
         localStorage.setItem('goods', JSON.stringify(array));
 
-        if (window.location.pathname !== '/goods.html') {
+        if (window.location.pathname !== 'goods.html') {
           window.location.href = 'goods.html';
         } else {
           renderGoods(array);
@@ -59,7 +59,7 @@ const getGoods = () => {
     })
   });
 
-  if (localStorage.getItem('goods') && window.location.pathname === '/goods.html') {
+  if (localStorage.getItem('goods') && window.location.pathname === 'goods.html') {
     renderGoods(JSON.parse(localStorage.getItem('goods')));
   }
 };
