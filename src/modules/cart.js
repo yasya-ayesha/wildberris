@@ -11,4 +11,4 @@ const cart = function (params) {
   })
 };
 
-cart();
+export default cart;
