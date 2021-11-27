@@ -585,27 +585,19 @@
 					</tr>
 				</thead>
 				<tbody class="cart-table__goods">
-					<tr>
-						<td>name</td>
-						<td>price$</td>
-						<td><button class="cart-btn-minus"">-</button></td>
-						<td>2</td>
-						<td><button class=" cart-btn-plus"">+</button></td>
-						<td>10$</td>
-						<td><button class="cart-btn-delete"">x</button></td>
-					</tr>
+					<!-- render cart here -->
 				</tbody>
 				<tfoot>
 					<tr>
 						<th colspan=" 5">Total:</th>
-						<th class="card-table__total" colspan="2">10000$</th>
+						<th class="card-table__total" colspan="2">0$</th>
 					</tr>
 
 					</tfoot>
 			</table>
 			<form class="modal-form" action="">
-				<input class="modal-input" type="text" placeholder="Имя" name="nameCustomer">
-				<input class="modal-input" type="text" placeholder="Телефон" name="phoneCustomer">
+				<input class="modal-input" type="text" placeholder="Name" id="nameCustomer">
+				<input class="modal-input" type="tel" placeholder="Phone" id="phoneCustomer">
 				<button class="button cart-buy" type="submit">
 					<span class="button-text">Checkout</span>
 				</button>
